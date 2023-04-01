@@ -7,21 +7,21 @@ import org.springframework.stereotype.Service;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@Service
-public class RecipeServicesImpl implements RecipeServices {
+ @Service
+ public class RecipeServicesImpl implements RecipeServices {
 
-    private static Map<Integer, Recipe> recipes = new LinkedHashMap<>();
-    private static int id = 0;
+     private static Map<Integer, Recipe> recipes = new LinkedHashMap<>();
+     private static int id = 0;
 
 
 
-    @Override
-    public void addRecipe(Recipe recipe) {
+     @Override
+     public void addRecipe(Recipe recipe) {
         recipes.put(id++, recipe);
     }
 
-    @Override
-    public Recipe getRecipe(int id) {
+     @Override
+     public Recipe getRecipe(int id) {
         return recipes.get(id);
     }
-}
+ }
